@@ -37,11 +37,15 @@
   }
 }
 
+h1 {
+  color:aliceblue;
+}
+
 * {
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(244, 244, 244);
+  background-color: #282c34;
   color: #282c34;
   font-family: 'Bitter', serif;
   

@@ -1,5 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import Form from './Form'
+import People from './People'
+import axios from './axios'
 import './App.css'
 
 const initialFormValues = {
@@ -27,9 +29,12 @@ function App() {
     setPeople(newFriend);  
   }
 
+  useEffect(() => {
+    axios.get('fakeapi.com').then(res => setPeople(res.data))
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
         <h1>Form App</h1>
         
         <Form 
@@ -38,7 +43,9 @@ function App() {
           submit={submitForm}
         />
         
-      </header>
+        
+        <People key={people.id} details={people}/>
+          
     </div>
   );
 }

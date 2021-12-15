@@ -13,6 +13,7 @@ export default function Form (props) {
     const onSubmit = evt => {
         evt.preventDefault();
         submit();
+        console.log(submit);
     }
 
     return (
@@ -46,7 +47,7 @@ export default function Form (props) {
                         <option value='Mascot'>Mascot</option>
                     </select>
                 </label>
-                
+
                 <div className='submit'>
                     <button>submit</button>
                 </div>
