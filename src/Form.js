@@ -28,7 +28,28 @@ export default function Form (props) {
                         onChange={onChange}
                     />
                 </label>
-                <label>Email</label>
+                <label>Email: 
+                    <input 
+                        name='email'
+                        type='email'
+                        placeholder='Email'
+                        value={values.email}
+                        onChange={onChange}
+                    />
+                </label>
+                <label>Role
+                    <select value={values.role} name='role' onChange={onChange}>
+                        <option value=''>-- Select a Role --</option>
+                        <option value='Guitarist'>Guitarist</option>
+                        <option value='Singer'>Singer</option>
+                        <option value='Vocalist'>Vocalist</option>
+                        <option value='Mascot'>Mascot</option>
+                    </select>
+                </label>
+                
+                <div className='submit'>
+                    <button>submit</button>
+                </div>
             </div>
         </form>
     )

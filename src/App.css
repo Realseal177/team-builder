@@ -57,3 +57,8 @@ body {
   background-color: #e85d04;
   margin-bottom: 24px;
 }
+
+label {
+  display: flex;
+  justify-content: space-between;
+}
